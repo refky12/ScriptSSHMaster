@@ -477,7 +477,7 @@ iptables-restore < /etc/iptables.up.rules
 
 # download script
 cd
-wget https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/install-premiumscript.sh -O - -o /dev/null|sh
+wget https://github.com/rotipisju/MASTER/raw/master/masterscript/premium-script.sh -O - -o /dev/null|sh
 
 # finalisasi
 apt-get -y autoremove
