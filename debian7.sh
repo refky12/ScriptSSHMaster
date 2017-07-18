@@ -477,7 +477,7 @@ iptables-restore < /etc/iptables.up.rules
 
 # download script
 cd
-wget https://github.com/rotipisju/MASTER/raw/master/masterscript/premium-script.sh -O - -o /dev/null|sh
+wget https://github.com/rotipisju/MASTER/raw/master/repo/install-premiumscript.sh -O - -o /dev/null|sh
 
 # finalisasi
 apt-get -y autoremove
@@ -504,9 +504,9 @@ echo " "
 echo "Instaslasi telah selesai! Mohon baca dan simpan penjelasan setup server!"
 echo " "
 echo "--------------------------- Penjelasan Setup Server ----------------------------"
-echo "                         Copyright HostingTermurah.net                          "
-echo "                        https://www.hostingtermurah.net                         "
-echo "               Created By Steven Indarto(fb.com/stevenindarto2)                 "
+echo "                           Copyright By; Kang wahid                             "
+echo "                            https://sshpremi.id.vg                              "
+echo "               Created By Steven Indarto(fb.com/Kang_Wahid)                 "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "Informasi Server"  | tee -a log-install.txt
@@ -547,4 +547,4 @@ echo "   - MRTG                    : http://$MYIP:85/mrtg/"  | tee -a log-instal
 echo "   - Log Instalasi           : cat /root/log-install.txt"  | tee -a log-install.txt
 echo "     NB: User & Password Webmin adalah sama dengan user & password root"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "----------- Script Created By Steven Indarto(fb.com/stevenindarto2) ------------"
+echo "----------- Script Created By Steven Indarto(fb.com/Kang_Wahid) ------------"
