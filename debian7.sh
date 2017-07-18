@@ -506,7 +506,7 @@ echo " "
 echo "--------------------------- Penjelasan Setup Server ----------------------------"
 echo "                           Copyright By; Kang wahid                             "
 echo "                            https://sshpremi.id.vg                              "
-echo "               Created By Steven Indarto(fb.com/Kang_Wahid)                 "
+echo "                     Created By Kang Wahid (fb.com/Kang_Wahid)                  "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "Informasi Server"  | tee -a log-install.txt
