@@ -367,18 +367,6 @@ sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/defau
 echo "/bin/false" >> /etc/shells
 service ssh restart
 service dropbear restart
-#Upgrade to Dropbear 2016
-cd
-apt-get install zlib1g-dev
-wget https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/dropbear/dropbear-2016.74.tar.bz2
-bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
-cd dropbear-2016.74
-./configure
-make && make install
-mv /usr/sbin/dropbear /usr/sbin/dropbear.old
-ln /usr/local/sbin/dropbear /usr/sbin/dropbear
-cd && rm -rf dropbear-2016.74 && rm -rf dropbear-2016.74.tar.bz2
-service dropbear restart
 
 # install vnstat gui
 cd /home/vps/public_html/
