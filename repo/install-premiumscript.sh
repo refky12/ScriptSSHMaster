@@ -50,8 +50,6 @@ chmod +x /usr/local/bin/speedtest
 chmod +x /usr/local/bin/ram
 chmod +x /usr/local/bin/log-limit
 chmod +x /usr/local/bin/log-ban
-chmod +x /usr/local/bin/listpassword
-chmod +x /usr/local/bin/pengumuman
 chmod +x /usr/local/bin/user-generate
 chmod +x /usr/local/bin/user-list
 chmod +x /usr/local/bin/diagnosa
