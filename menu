@@ -75,8 +75,8 @@ function used_data(){
 	clear
 
 	echo "--------------- Selamat datang di Server - IP: $myip ---------------"
-	echo "Script By      : Ibnu Fachrizal"
-	echo "Facebook       : www.facebook.com/ibnufachrizal"
+	echo "Script By      : Kang Wahid"
+	echo "Facebook       : www.facebook.com/kangbae.1"
 	echo "WA       : 087773091160"
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -145,7 +145,7 @@ function used_data(){
             echo -e "Akun Sudah Diperpanjang Hingga $exp"
             echo -e "Password telah diganti dengan $Pass"
             echo -e "==========================="
-            echo -e "Script by \e[1;33;44mIbnu Fachrizal\e[0m"
+            echo -e "Script by \e[1;33;44mKang Wahid\e[0m"
             ;;	
         4)
 			#!/bin/bash
@@ -268,11 +268,11 @@ echo " "
         20)	
             echo "Service Openvpn restart .................tunggu sebentar"
             service openvpn restart
-            echo "Restart OpenVPN selesai Script By Ibnu Fachrizal"
+            echo "Restart OpenVPN selesai Script By Kang Wahid"
 			;;	
 		21)
 		    /etc/init.d/webmin restart
-		    echo "Restart Webmin selesai Script By Ibnu Fachrizal"
+		    echo "Restart Webmin selesai Script By Kang Wahid"
 		    ;;
 		22)
             wget freevps.us/downloads/bench.sh -O - -o /dev/null|bash
