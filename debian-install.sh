@@ -25,7 +25,7 @@ else
 exit
 fi
 # check registered ip
-wget -q -O IP $source/IP.txt
+wget -q -O IP $source/IP
 if ! grep -w -q $MYIP IP; then
 clear
         echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
