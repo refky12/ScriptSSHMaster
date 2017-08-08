@@ -47,16 +47,16 @@ echo " " >> /var/lib/setup-log/setup.txt
 scriptchecker=`cat /var/lib/setup-log/setup.txt | grep $scriptname`;
 if [ "$scriptchecker" != "" ]; then
 		clear
-		echo  "-----------------------------------------------------------------------------------------";
-		echo  "Error! Anda sudah pernah memasukkan script ini sebelumnya";
-		echo  "Script ini hanya boleh dimasukkan 1x saja!";
-		echo  "-----------------------------------------------------------------------------------------";
-		echo  "";
-		echo  "------------------------------------------------------------";
-		echo  "Jika Anda sebelumnya gagal dalam instalasi, Mohon untuk reinstall OS VPS Anda lebih dulu!";
-		echo  "Anda dapat mereinstall OS VPS Anda melalui VPS Control Panel";
-		echo  "Cara Mengakses VPS Control Panel: bit.ly/caraaksesvpspanel";
-		echo -"-------------------------------------------------------------------------------------------";
+		echo -e "-----------------------------------------------------------------------------------------";
+		echo -e "Error! Anda sudah pernah memasukkan script ini sebelumnya";
+		echo -e "Script ini hanya boleh dimasukkan 1x saja!";
+		echo -e "-----------------------------------------------------------------------------------------";
+		echo -e "";
+		echo -e "------------------------------------------------------------";
+		echo -e "Jika Anda sebelumnya gagal dalam instalasi, Mohon untuk reinstall OS VPS Anda lebih dulu!";
+		echo -e "Anda dapat mereinstall OS VPS Anda melalui VPS Control Panel";
+		echo -e "Cara Mengakses VPS Control Panel: bit.ly/caraaksesvpspanel";
+		echo -e "-------------------------------------------------------------------------------------------";
         exit 0;
 	else
 		echo "";
