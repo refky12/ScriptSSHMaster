@@ -12,9 +12,9 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 vps="zvur";
 #vps="aneka";
 if [ $vps = "zvur" ]; then
-        source="https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/"
+        source="https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/install"
 else
-        source="https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/"
+        source="https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/install"
 exit
 fi
 # check registered ip
