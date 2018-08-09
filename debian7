@@ -5,7 +5,6 @@ clear
 
 if [ $(id -u) != "0" ]; then
     echo "Error: Anda Harus Login Sebagai Root !"
-rm IP
 rm -rf debian7
     exit
 fi
@@ -78,9 +77,9 @@ cd
 
 if [ $(id -u) != "0" ]; then
     echo "Error: Anda Harus Login Sebagai Root !"
+    clear
     exit
 fi
-clear
 
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
