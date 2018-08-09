@@ -7,8 +7,6 @@ if [ ! -e /usr/bin/curl ]; then
 	apt-get -y install curl
 fi
 
-clear	
-
 if [ $(id -u) != "0" ]; then
     echo "Error: Anda Harus Login Sebagai Root !"
     exit
