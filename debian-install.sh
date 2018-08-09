@@ -358,7 +358,7 @@ mkdir /var/lib/premium-script
 # install badvpn
 wget -O /usr/bin/badvpn-udpgw "https://github.com/refky12/ScriptSSHMaster/raw/master/repo/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw "https://github.com/refky12/ScriptSSHMaster/master/repo/badvpn-udpgw64"
+  wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/repo/badvpn-udpgw64"
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
@@ -366,7 +366,7 @@ screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
 # install mrtg
 wget -O /etc/snmp/snmpd.conf "https://github.com/refky12/ScriptSSHMaster/raw/master/repo/snmpd.conf"
-wget -O /root/mrtg-mem.sh "https://github.com/refky12/ScriptSSHMaster/master/repo/mrtg-mem.sh"
+wget -O /root/mrtg-mem.sh "https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/repo/mrtg-mem.sh"
 chmod +x /root/mrtg-mem.sh
 cd /etc/snmp/
 sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
@@ -400,7 +400,7 @@ service dropbear restart
 #Upgrade to Dropbear 2016
 cd
 apt-get install zlib1g-dev
-wget https://github.com/refky12/ScriptSSHMaster/repo/dropbear-2016.74.tar.bz2
+wget https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/repo/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
 cd dropbear-2016.74
 ./configure
@@ -412,7 +412,7 @@ service dropbear restart
 
 # install vnstat gui
 cd /home/vps/public_html/
-wget https://github.com/refky12/ScriptSSHMaster/repo/vnstat_php_frontend-1.5.1.tar.gz
+wget https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/repo/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
@@ -466,7 +466,7 @@ service squid3 restart
 
 # install webmin
 cd
-wget "https://github.com/refky12/ScriptSSHMaster/repo/webmin_1.801_all.deb"
+wget "https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/repo/webmin_1.801_all.deb"
 dpkg --install webmin_1.801_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
@@ -507,7 +507,7 @@ iptables-restore < /etc/iptables.up.rules
 
 # download script
 cd
-wget https://github.com/refky12/ScriptSSHMaster/repo/install-premiumscript.sh -O - -o /dev/null|sh
+wget https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/repo/install-premiumscript.sh -O - -o /dev/null|sh
 
 # finalisasi
 apt-get -y autoremove
@@ -534,7 +534,7 @@ echo " "
 echo "Instaslasi telah selesai! Mohon baca dan simpan penjelasan setup server!"
 echo " "
 echo "--------------------------- Penjelasan Setup Server ----------------------------"
-echo "                           Copyright By_ Kang Wahid
+echo "                           Copyright By_ Kang Wahid                             "
 echo "                          Modified By Refky Satria Bima                         "
 echo "                      https://www.facebook.com/refkysatriabima                  "
 echo "                              sms/wa; 089631449716                              "
