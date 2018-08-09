@@ -8,6 +8,7 @@ fi
 
 rm -f /root/IP
 rm -f /root/debian7.sh
+clear
 
 #Requirement
 if [ ! -e /usr/bin/curl ]; then
