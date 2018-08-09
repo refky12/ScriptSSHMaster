@@ -10,10 +10,8 @@ fi
 if [ $(id -u) != "0" ]; then
     echo "Error: Anda Harus Login Sebagai Root !"
     exit
-    
-    rm -f IP
-    rm -f debian7
 fi
+rm debian7
 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
