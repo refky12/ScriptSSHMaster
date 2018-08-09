@@ -15,7 +15,8 @@ if [ $(id -u) != "0" ]; then
 fi
 
 rm -f IP
-rm -f debian7.sh
+rm -f debian7.sh	
+
 clear	
 
 # initialisasi var
