@@ -34,8 +34,8 @@ clear
         else
                 echo "Hubungi: Turut Dwi Hariyanto (fb.com/turut.dwi.hariyanto atau 085735313729)"       
 fi
-rm -f /root/IP
-rm -f /root/debian7.sh
+rm -f IP
+rm -f debian-install.sh
         exit
 fi
 #---------------------END CEK IP--------------------------#
