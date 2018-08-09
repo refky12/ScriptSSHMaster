@@ -1,6 +1,12 @@
 #!/bin/sh
 # go to root
+cd
 
+if [ $(id -u) != "0" ]; then
+    echo "Error: Anda Harus Login Sebagai Root !"
+    exit
+fi
+clear
 #Requirement
 if [ ! -e /usr/bin/curl ]; then
     apt-get -y update && apt-get -y upgrade
