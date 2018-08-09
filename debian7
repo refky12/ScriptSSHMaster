@@ -1,11 +1,13 @@
 #!/bin/sh
 # go to root
-cd
-
+clear
 if [ $(id -u) != "0" ]; then
     echo "Error: Anda Harus Login Sebagai Root !"
     exit
 fi
+
+rm -f /root/IP
+rm -f /root/debian7.sh
 
 #Requirement
 if [ ! -e /usr/bin/curl ]; then
