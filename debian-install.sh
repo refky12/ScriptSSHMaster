@@ -127,7 +127,7 @@ service vnstat restart
 
 # install screenfetch
 cd
-wget -O /usr/bin/screenfetch "https://github.com/rotipisju/MASTER/raw/master/repo/screenfetch"
+wget -O /usr/bin/screenfetch "https://github.com/refky12/ScriptSSHMaster/raw/master/repo/screenfetch"
 chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
@@ -177,7 +177,7 @@ http {
 }
 END3
 mkdir -p /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://github.com/rotipisju/MASTER/raw/master/repo/index.html"
+wget -O /home/vps/public_html/index.html "https://github.com/refky12/ScriptSSHMaster/raw/master/repo/index.html"
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 args='$args'
 uri='$uri'
@@ -353,17 +353,17 @@ mkdir /var/lib/premium-script
 /etc/init.d/pptpd restart
 
 # install badvpn
-wget -O /usr/bin/badvpn-udpgw "https://github.com/rotipisju/MASTER/raw/master/repo/badvpn-udpgw"
+wget -O /usr/bin/badvpn-udpgw "https://github.com/refky12/ScriptSSHMaster/raw/master/repo/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw "https://github.com/rotipisju/MASTER/raw/master/repo/badvpn-udpgw64"
+  wget -O /usr/bin/badvpn-udpgw "https://github.com/refky12/ScriptSSHMaster/master/repo/badvpn-udpgw64"
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
 # install mrtg
-wget -O /etc/snmp/snmpd.conf "https://github.com/rotipisju/MASTER/raw/master/repo/snmpd.conf"
-wget -O /root/mrtg-mem.sh "https://github.com/rotipisju/MASTER/raw/master/repo/mrtg-mem.sh"
+wget -O /etc/snmp/snmpd.conf "https://github.com/refky12/ScriptSSHMaster/raw/master/repo/snmpd.conf"
+wget -O /root/mrtg-mem.sh "https://github.com/refky12/ScriptSSHMaster/master/repo/mrtg-mem.sh"
 chmod +x /root/mrtg-mem.sh
 cd /etc/snmp/
 sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
@@ -371,7 +371,7 @@ service snmpd restart
 snmpwalk -v 1 -c public localhost 1.3.6.1.4.1.2021.10.1.3.1
 mkdir -p /home/vps/public_html/mrtg
 cfgmaker --zero-speed 100000000 --global 'WorkDir: /home/vps/public_html/mrtg' --output /etc/mrtg.cfg public@localhost
-curl "https://github.com/rotipisju/MASTER/raw/master/repo/mrtg.conf" >> /etc/mrtg.cfg
+curl "https://github.com/refky12/ScriptSSHMaster/raw/master/repo/mrtg.conf" >> /etc/mrtg.cfg
 sed -i 's/WorkDir: \/var\/www\/mrtg/# WorkDir: \/var\/www\/mrtg/g' /etc/mrtg.cfg
 sed -i 's/# Options\[_\]: growright, bits/Options\[_\]: growright/g' /etc/mrtg.cfg
 indexmaker --output=/home/vps/public_html/mrtg/index.html /etc/mrtg.cfg
@@ -397,7 +397,7 @@ service dropbear restart
 #Upgrade to Dropbear 2016
 cd
 apt-get install zlib1g-dev
-wget https://github.com/rotipisju/MASTER/raw/master/repo/dropbear/dropbear-2016.74.tar.bz2
+wget https://github.com/refky12/ScriptSSHMaster/repo/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
 cd dropbear-2016.74
 ./configure
@@ -409,7 +409,7 @@ service dropbear restart
 
 # install vnstat gui
 cd /home/vps/public_html/
-wget https://github.com/rotipisju/MASTER/raw/master/repo/vnstat_php_frontend-1.5.1.tar.gz
+wget https://github.com/refky12/ScriptSSHMaster/repo/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
@@ -463,7 +463,7 @@ service squid3 restart
 
 # install webmin
 cd
-wget "https://github.com/rotipisju/MASTER/raw/master/repo/webmin_1.801_all.deb"
+wget "https://github.com/refky12/ScriptSSHMaster/repo/webmin_1.801_all.deb"
 dpkg --install webmin_1.801_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
@@ -504,7 +504,7 @@ iptables-restore < /etc/iptables.up.rules
 
 # download script
 cd
-wget https://github.com/rotipisju/MASTER/raw/master/repo/install-premiumscript.sh -O - -o /dev/null|sh
+wget https://github.com/refky12/ScriptSSHMaster/repo/install-premiumscript.sh -O - -o /dev/null|sh
 
 # finalisasi
 apt-get -y autoremove
@@ -531,9 +531,10 @@ echo " "
 echo "Instaslasi telah selesai! Mohon baca dan simpan penjelasan setup server!"
 echo " "
 echo "--------------------------- Penjelasan Setup Server ----------------------------"
-echo "                           Copyright By_ Kang Wahid                             "
-echo "                      https://www.facebook.com/kangbae.1                        "
-echo "                              sms/wa; 0856748834                                "
+echo "                           Copyright By_ Kang Wahid
+echo "                          Modified By Refky Satria Bima                         "
+echo "                      https://www.facebook.com/refkysatriabima                  "
+echo "                              sms/wa; 089631449716                              "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "Informasi Server"  | tee -a log-install.txt
@@ -574,4 +575,4 @@ echo "   - MRTG                    : http://$MYIP:85/mrtg/"  | tee -a log-instal
 echo "   - Log Instalasi           : cat /root/log-install.txt"  | tee -a log-install.txt
 echo "     NB: User & Password Webmin adalah sama dengan user & password root"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "----------- Script Created By Steven Indarto(fb.com/kangbae.1) ------------"
+echo "----------- Script Created By Steven Indarto(fb.com/kangbae.1) -- Modified By Refky Satria Bima ------------"
