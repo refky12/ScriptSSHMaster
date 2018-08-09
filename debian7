@@ -23,7 +23,7 @@ fi
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 #---------------------- CEk IP Terdaftar --------------------#
-vps="zvur";
+vps="sshvpn";
 #vps="aneka";
 if [ $vps = "zvur" ]; then
         source="https://raw.githubusercontent.com/refky12/ScriptSSHMaster/master/"
