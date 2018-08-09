@@ -128,8 +128,6 @@ apt-file update
 vnstat -u -i eth0
 service vnstat restart
 
-# install screenfetch
-cd
 #touch screenfetch-dev
 cd
 wget https://github.com/KittyKatt/screenFetch/archive/master.zip
