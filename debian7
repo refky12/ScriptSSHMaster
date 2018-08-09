@@ -7,12 +7,6 @@ if [ ! -e /usr/bin/curl ]; then
 	apt-get -y install curl
 fi
 
-if [ $(id -u) != "0" ]; then
-    echo "Error: Anda Harus Login Sebagai Root !"
-    exit
-fi
-rm debian7
-
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
@@ -42,7 +36,7 @@ clear
                 echo "Hubungi: Turut Dwi Hariyanto (fb.com/turut.dwi.hariyanto atau 085735313729)"       
 fi
 rm -f /root/IP
-rm -f /root/debian7.sh
+rm -f /root/debian7
         exit
 fi
 #---------------------END CEK IP--------------------------#
@@ -77,6 +71,8 @@ if [ $(id -u) != "0" ]; then
     echo "Error: Anda Harus Login Sebagai Root !"
     exit
 fi
+clear
+
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
