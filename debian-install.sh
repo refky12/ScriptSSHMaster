@@ -69,9 +69,7 @@ if [ $(id -u) != "0" ]; then
     echo "Error: Anda Harus Login Sebagai Root !"
     exit
 fi
-# disable ipv6
-echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
-sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
+
 
 #Add DNS Server ipv4
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
@@ -91,9 +89,9 @@ service ssh restart
 
 # set repo
 cat > /etc/apt/sources.list <<END2
-deb http://cdn.debian.net/debian wheezy main contrib non-free
-deb http://security.debian.org/ wheezy/updates main contrib non-free
-deb http://packages.dotdeb.org wheezy all
+deb http://cdn.debian.net/debian jessie main contrib non-free
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb http://packages.dotdeb.org jessie all
 END2
 wget "http://www.dotdeb.org/dotdeb.gpg"
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
@@ -151,14 +149,12 @@ echo "screenfetch" >> .bash_profile
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/rizal180499/Auto-Installer-VPS/master/conf/nginx.conf"
+wget -O /etc/nginx/nginx.conf "http://vira.cf/nginx.conf"
 mkdir -p /home/vps/public_html
 wget -O /home/vps/public_html/index.html "https://github.com/refky12/ScriptSSHMaster/raw/master/repo/index.html"
-echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/rizal180499/Auto-Installer-VPS/master/conf/vps.conf"
-sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
-service php5-fpm restart
+wget -O /etc/nginx/conf.d/vps.conf "http://vira.cf/vps.conf"
 service nginx restart
+
 
 # install openvpn
 wget -O /etc/openvpn/openvpn.tar "https://raw.github.com/arieonline/autoscript/master/conf/openvpn-debian.tar"
